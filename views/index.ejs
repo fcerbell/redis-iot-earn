@@ -1,0 +1,33 @@
+<html ng-app="iotDemo">
+<head>
+  <link rel="stylesheet" href="/stylesheets/bootstrap.css"/>
+  <script src="javascripts/socket.io.js"></script>
+  <script src="javascripts/angular.min.js"></script>
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script src="app.js"></script>
+</head>
+
+
+<body ng-controller="ValuesController">
+	
+  <div class="container">
+
+ 	<div class="jumbotron">
+		<img src="/images/redislabs.png" align="right" width="100px" alt="Mountain View"/>
+        	<h1><%= title %></h1>
+        	<p><%= desc %></p>
+  	</div>
+
+    <div class="row" ng-repeat="mac in macs">
+    	<div class="panel panel-default">
+		<div class="panel-heading">
+			<b>{{items['name::' + mac]}}</b> : {{items['last::' + mac]}} 
+		</div>
+		<div class="panel-body">
+			<div id="{{mac}}"></div>
+		</div>
+	</div>
+    </div>
+  </div>
+</body>
+</html>
