@@ -8,6 +8,18 @@ The web UI displays the username and the last value in real time. It was suppose
 Google Chart drawing because each device sends value update at 1500 values/sec, I expect between 15 and 80 devices in the workshops. And the chart is already
 unable to refresh with only one device.
 
+## Usage
+
+Note, before starting app, a redis server should be started:
+
+```
+apt install redis # for Debian, adapt for other OS
+npm install
+npm start
+www-browser http://localhost:3000
+```
+
+## Notes
 
 Visualization UI on the client side made by David. Big Thank you
 https://github.com/nosqlgeek/iot-redis-viz
